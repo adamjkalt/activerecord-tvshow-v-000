@@ -27,6 +27,7 @@ class Show < ActiveRecord::Base
   end
 
   def self.shows_by_alphabetical_order
+    Show.order("title DESC")
   # returns an array of all of the shows sorted by alphabetical order according to
   # their names. hint: use the order Active Record method.
   end

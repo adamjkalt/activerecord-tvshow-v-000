@@ -9,7 +9,7 @@ class Show < ActiveRecord::Base
   end
 
   def lowest_rating
-  # returns the lowest value in the ratings column.
+    rating = self.minimum(:rating)
   end
 
   def least_popular_show
